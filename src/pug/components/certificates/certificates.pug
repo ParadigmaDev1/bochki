@@ -1,0 +1,27 @@
+mixin certificates(data = {})
+    .certificates
+        .certificates__inner.container
+            h3.certificates__title!= data.title
+            .certificates__content 
+                .certificates__text-block 
+                    .certificates__text-block-img 
+                        img(src="assets/img/certificates/img.jpg", alt="certificate text")
+                    .certificates__text
+                        p.certificates__text-badge подтверждение качества
+                        p.certificates__text-descr Наша компания имеет 45 патентов, 17 товарных знаков и 2 сертификата соответствия пожарной безопасности, регламентирующих наше исключительное право на производство бань-бочек определенной формы и функциональной принадлежности в России, Казахстане, Республике Беларусь и Евросоюзе.
+                .certificates__swiper-wrapper
+                    .certificates__swiper
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                .certificates__swiper-img 
+                                    img(src="assets/img/certificates/certificate.jpg", alt="certificate")
+                                    a(href="#").btn.circle.s
+                                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M9 1L9 6C9 7.65685 7.65685 9 6 9L1 9" stroke="#493F39" stroke-linecap="round"/>
+                                            <path d="M9 11.4004L9 17.0004" stroke="#493F39" stroke-linecap="round"/>
+                                            <path d="M11.4004 9H17.0004" stroke="#493F39" stroke-linecap="round"/>
+                                        </svg>
+                    .certificates__swiper-text 
+                        .swiper-wrapper 
+                            .swiper-slide 
+                                p Сертификат соответствия ТР ТС (Технический регламент Таможенного Союза)

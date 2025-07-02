@@ -12,6 +12,12 @@ import imagemin from "gulp-imagemin";
 
 const sass = gulpSass(dartSass);
 const { create } = browserSync;
+function videos() {
+  return gulp
+    .src("./src/assets/files/**/*")
+    .pipe(gulp.dest("./dist/assets/files"))
+    .pipe(browserSync.stream());
+}
 
 function images() {
   // Первый поток: конвертация в WebP
@@ -84,5 +90,5 @@ function serve() {
   gulp.watch("./src/**/*.scss", styles);
 }
 
-export const dev = gulp.series(styles, serve, images);
-export const build = gulp.series(styles, images);
+export const dev = gulp.series(styles, serve, images, videos);
+export const build = gulp.series(styles, images, videos);

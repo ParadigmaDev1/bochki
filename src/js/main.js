@@ -1,2 +1,6 @@
-import "@/pug/pages/about/about-hero/about-hero.js";
-import "@/modals/test-modal/test-modal.js";
+import "@/pug/components/selector/selector.js";
+import "@/pug/components/header/header.js";
+
+import "./modules/tabs.js";
+import "./modules/swiper.js";
+import "./modules/marquee.js";

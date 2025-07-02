@@ -1,0 +1,5 @@
+mixin production-card(data ={})
+    a(href="#").production-card
+        .paroduction-card__img 
+            img(src=data.img, alt="production")
+        p.production-card__title!= data.title

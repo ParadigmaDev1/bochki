@@ -1,0 +1,69 @@
+@import "../../../../assets/scss/common/mixins.scss";
+
+.home-directions {
+  background: var(--back-beige-color);
+  padding-top: 80px;
+  .home-directions__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    .home-directions__item {
+      position: relative;
+      border-radius: 28px;
+      overflow: hidden;
+      &:before {
+        content: "";
+        position: absolute;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 1) 100%
+        );
+        bottom: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+      }
+      .home-directions__item-img {
+        position: relative;
+        padding-bottom: 75%;
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          object-fit: cover;
+        }
+      }
+      .home-directions__item-content {
+        position: absolute;
+        top: 48px;
+        right: 48px;
+        left: 48px;
+        bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 3;
+        .home-directions__item-title {
+          color: var(--white-color);
+          @include display-l;
+        }
+        .home-directions__item-bottom {
+          display: grid;
+          grid-template-columns: 1fr 195px;
+          gap: 28px;
+          align-items: flex-end;
+          .home-directions__item-descr {
+            @include body-l;
+            color: var(--white-color);
+          }
+          .btn-link {
+            padding-left: 24px;
+            justify-content: space-between;
+          }
+        }
+      }
+    }
+  }
+}

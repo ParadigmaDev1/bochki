@@ -1,0 +1,148 @@
+@import "../../../../assets/scss/common/mixins.scss";
+
+.home-bathhouse {
+  background: var(--back-beige-color);
+  border-radius: 28px 28px 0 0;
+  margin-top: 80px;
+  padding-top: 80px;
+  .home-bathhouse__inner {
+    h3 {
+      @include display-l;
+    }
+    .home-bathhouse__content {
+      display: grid;
+      grid-template-columns: 432px 1fr;
+      align-items: flex-start;
+      gap: 24px;
+      margin-top: 28px;
+      .home-bathhouse__tabs {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        .home-bathhouse__tab {
+          background: var(--white-color);
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 6px;
+          &.active {
+            .home-bathhouse__tab-content {
+              .home-bathhouse__tab-title {
+                color: var(--accent-color);
+              }
+            }
+            .home-bathhouse__tab-btn {
+              background: var(--accent-color);
+              svg {
+                path {
+                  stroke: var(--white-color);
+                }
+              }
+            }
+          }
+          &:hover {
+            .home-bathhouse__tab-content {
+              .home-bathhouse__tab-title {
+                color: var(--hover-color);
+              }
+            }
+            .home-bathhouse__tab-btn {
+              background: var(--hover-color);
+              svg {
+                path {
+                  stroke: var(--white-color);
+                }
+              }
+            }
+          }
+          .home-bathhouse__tab-content {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            .home-bathhouse__tab-img {
+              width: 75px;
+              height: 56px;
+              border-radius: 10px;
+              border: 1px solid var(--back-beige-color);
+              display: block;
+              overflow: hidden;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            }
+            .home-bathhouse__tab-title {
+              @include body-l;
+              transition: var(--trs-300);
+            }
+          }
+          .home-bathhouse__tab-btn {
+            background: var(--back-beige-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            transition: var(--trs-300);
+            svg {
+              width: 5px;
+              height: 10px;
+            }
+          }
+        }
+      }
+      .home-bathhouse__tab-contents {
+        height: 100%;
+        .home-bathhouse__tab-content {
+          border-radius: 28px;
+          overflow: hidden;
+          position: relative;
+          &:before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 238px;
+            background: linear-gradient(
+              180deg,
+              rgba(0, 0, 0, 0) 0%,
+              rgba(0, 0, 0, 1) 100%
+            );
+          }
+          .home-bathhouse__tab-content-img {
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .home-bathhouse__tab-content-video {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+            z-index: 2;
+          }
+          .home-bathhouse__tab-content-title {
+            position: absolute;
+            bottom: 37px;
+            left: 48px;
+            z-index: 2;
+            @include h4;
+            color: var(--white-color);
+          }
+          .home-bathhouse__tab-content-detailed {
+            position: absolute;
+            bottom: 28px;
+            right: 28px;
+            z-index: 2;
+          }
+        }
+      }
+    }
+  }
+}

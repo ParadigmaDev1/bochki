@@ -1,0 +1,198 @@
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+button,
+a {
+  &.btn-link {
+    background: var(--accent-color);
+    padding: 4px 4px 4px 37px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    transition: var(--trs-300);
+    &:hover {
+      background: var(--hover-color);
+      .btn-link-icon {
+        svg {
+          path {
+            stroke: var(--hover-color);
+          }
+        }
+      }
+    }
+    .btn-link-text {
+      text-transform: uppercase;
+      @include descr-m;
+      color: var(--white-color);
+    }
+    .btn-link-icon {
+      background: var(--white-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      svg {
+        width: 5px;
+        height: 10px;
+      }
+    }
+  }
+  &.btn-video {
+    background: var(--white-color);
+    padding: 4px 4px 4px 26px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    transition: var(--trs-300);
+    &:hover {
+      .btn-video-text {
+        color: var(--hover-color);
+      }
+      .btn-video-icon {
+        background: var(--hover-color);
+      }
+    }
+    .btn-video-text {
+      text-transform: uppercase;
+      @include descr-m;
+      transition: var(--trs-300);
+
+      // color: var(--white-color);
+    }
+    .btn-video-icon {
+      background: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      transition: var(--trs-300);
+
+      svg {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  }
+  &.link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    &:hover {
+      .link-text {
+        color: var(--hover-color);
+      }
+      .link-icon {
+        background: var(--hover-color);
+      }
+    }
+    .link-text {
+      @include descr-s;
+      transition: var(--trs-300);
+    }
+    .link-icon {
+      background: var(--accent-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      transition: var(--trs-300);
+
+      svg {
+        width: 5px;
+        height: 10px;
+      }
+    }
+  }
+  &.social {
+    background: var(--white-color);
+    padding: 4px 4px 4px 26px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    transition: var(--trs-300);
+    &:hover {
+      .social-text {
+        color: var(--hover-color);
+      }
+    }
+    .social-text {
+      text-transform: uppercase;
+      @include descr-m;
+      transition: var(--trs-300);
+
+      // color: var(--white-color);
+    }
+    .social-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      transition: var(--trs-300);
+
+      svg {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &-vk {
+      &:hover {
+        .social-icon {
+          background: var(--blue-hover-color);
+        }
+      }
+      .social-icon {
+        background: var(--blue-color);
+      }
+    }
+    &-tg {
+      &:hover {
+        .social-icon {
+          background: var(--sky-hover-color);
+        }
+      }
+      .social-icon {
+        background: var(--sky-color);
+      }
+    }
+    &-youtube {
+      &:hover {
+        .social-icon {
+          background: var(--red-hover-color);
+        }
+      }
+      .social-icon {
+        background: var(--red-color);
+      }
+    }
+  }
+}
+.btn {
+  &.circle {
+    background: var(--back-beige-color);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.s {
+      width: 40px;
+      height: 40px;
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+}

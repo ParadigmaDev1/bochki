@@ -1,3 +1,168 @@
-header {
-  background: red;
+@import "../../../assets/scss/common/mixins.scss";
+
+.header {
+  padding-top: 28px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  transition: var(--trs-300);
+  &.active {
+    background: var(--back-beige-color);
+    padding-bottom: 10px;
+    box-shadow: var(--shadow2);
+    .header__inner {
+      .logo {
+        svg {
+          path {
+            fill: var(--accent-color);
+          }
+        }
+      }
+      .header__content {
+        .header__contacts {
+          background: var(--white-color);
+          .tel {
+            color: var(--brown-color);
+          }
+          .selector {
+            .selector__title {
+              span {
+                color: var(--brown-color);
+              }
+              svg {
+                path {
+                  stroke: var(--brown-color);
+                }
+              }
+            }
+          }
+        }
+        .header__features {
+          background: var(--white-color);
+        }
+      }
+    }
+  }
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      width: 189px;
+      height: 35px;
+      &:hover {
+        svg {
+          path {
+            fill: var(--hover-color);
+          }
+        }
+      }
+    }
+    .header__content {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      .header__contacts {
+        background: rgba(242, 239, 234, 0.1);
+        backdrop-filter: blur(10px);
+        padding: 4px 4px 4px 27px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        transition: var(--trs-300);
+
+        .tel {
+          @include descr-m;
+          color: var(--white-color);
+          transition: var(--trs-300);
+          margin-left: 58px;
+          &:hover {
+            color: var(--hover-color);
+          }
+        }
+        .selector {
+          &:first-child {
+            margin-right: 34px;
+          }
+        }
+        .header__socials {
+          margin-left: 20px;
+          display: flex;
+          align-items: center;
+          gap: 4px;
+          a {
+            width: 48px;
+            height: 48px;
+            border-radius: 10px;
+          }
+        }
+      }
+      .header__features {
+        background: var(--back-beige-color);
+        padding: 4px 4px 4px 27px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        transition: var(--trs-300);
+
+        a {
+          color: var(--brown-color);
+          text-transform: uppercase;
+          @include descr-s;
+          transition: var(--trs-300);
+
+          &:hover {
+            color: var(--hover-color);
+          }
+          &:first-child {
+            margin-right: 28px;
+          }
+        }
+        .header__catalog {
+          background: var(--accent-color);
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          height: 48px;
+          padding: 0 28px;
+          border-radius: 10px;
+          margin-left: 20px;
+          transition: var(--trs-300);
+
+          &:hover {
+            background: var(--hover-color);
+          }
+          span {
+            color: var(--white-color);
+            text-transform: uppercase;
+            @include descr-s;
+          }
+        }
+        .header__burger {
+          width: 48px;
+          height: 48px;
+          border-radius: 10px;
+          background: var(--brown-color);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-left: 4px;
+          gap: 5px;
+          transition: var(--trs-300);
+
+          &:hover {
+            background: var(--hover-color);
+          }
+          span {
+            width: 16px;
+            height: 1px;
+            background: var(--white-color);
+          }
+        }
+      }
+    }
+  }
 }

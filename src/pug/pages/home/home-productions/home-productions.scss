@@ -1,0 +1,17 @@
+@import "../../../../assets/scss/common/mixins.scss";
+
+.home-productions {
+  background: var(--back-beige-color);
+  padding-top: 80px;
+  .home-productions__inner {
+    h3 {
+      @include h2;
+    }
+    .home-productions__list {
+      margin-top: 36px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 24px;
+    }
+  }
+}

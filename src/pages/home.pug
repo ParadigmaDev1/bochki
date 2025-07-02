@@ -1,0 +1,57 @@
+extends ../templates/template.pug
+block head 
+  +head(['header', 'hero', "features", "home-bathhouse", "production-card", "home-productions", "home-special-offers", "home-about", "home-directions", "home-team", "certificates", 'selector'])
+block header 
+  +header()
+block content
+  +hero({title: '№1 по объему <br> продаж бань-бочек <br>в России', bottomContent: true})
+  +features({
+    img: 'assets/img/features/img.png', 
+    subtitle: 'Почему уже более 15-ти лет выбирают нас?', 
+    badge: 'интересный факт', 
+    text: 'Доставили более 18 000 бань по миру. Потребуется 6 футбольных полей, чтобы разместить такое количество!', 
+    items: [
+    {
+      img: 'assets/img/features/1.jpg', 
+      badge: 'география присутствия', 
+      title: '11 <span>стран</span>', 
+      descr: 'Торговая марка Bochky зарегистрирована в 11 странах мира. Идеальным паром в наших банях наслаждаются в Германии, Канаде, Чехии, Японии, ЮАР, Австралии и др.'
+    }, 
+    {
+      img: 'assets/img/features/2.jpg', 
+      badge: 'производство', 
+      title: '82%', 
+      descr: 'Комплектующих мы производим самостоятельно. Именно поэтому мы абсолютно уверены в качестве нашей продукции.'
+    }, 
+    {
+      img: 'assets/img/features/3.jpg', 
+      badge: 'производство', 
+      title: '5 000 <span>м<sup>2</sup></span>', 
+      descr: 'Площадь производственных мощностей компании Bochky. мы — Крупнейший завод-изготовитель бань-бочек в мире. '
+    },
+    {
+      img: 'assets/img/features/4.jpg', 
+      badge: 'производство', 
+      title: '1 000 <span>га</span>', 
+      descr: 'Собственный лес и деревообрабатывающее производство — полный контроль качества от посадки деревьев до готового изделия'
+    }
+  ]})
+  +home-bathhouse()
+  +home-productions()
+  +home-special-offers()
+  +home-about()
+  +home-directions()
+  +home-team()
+  +features({
+    load: true,
+    img: 'assets/img/icons/logo.svg', 
+    subtitle: 'Cюжеты о Bochky <br>на феде­ральном телевидении', 
+    badge: 'передачи о нас', 
+    descr: 'Небольшой абзац текста. Обзоры бань-бочек, технология производства, советы по установке и растопке', 
+    video: true,
+    items: [
+    {img: 'assets/img/features/5.jpg'}, 
+    {img: 'assets/img/features/6.jpg'}, 
+    {img: 'assets/img/features/7.jpg'}
+  ]}).white.items-full
+  +certificates()

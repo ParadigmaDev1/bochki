@@ -1,0 +1,106 @@
+@import "../../../assets/scss/common/mixins.scss";
+
+.hero {
+  min-height: 100vh;
+  height: fit-content;
+  border-radius: 0 0 20px 20px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:before {
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 396px;
+    z-index: 2;
+  }
+  .hero__video-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    video {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .hero__inner {
+    z-index: 2;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 164px;
+    padding-bottom: 49px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    .hero__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      flex: 1;
+      .hero__title {
+        @include display-xl;
+        color: var(--white-color);
+      }
+      .hero__content--bottom {
+        display: flex;
+        justify-content: space-between;
+        .hero__subtitle {
+          @include display-l;
+          color: var(--accent-color);
+        }
+        .hero__button {
+          background: var(--accent-color);
+          padding: 4px 4px 4px 37px;
+          border-radius: 12px;
+          display: flex;
+          align-items: center;
+          gap: 28px;
+          transition: var(--trs-300);
+          &:hover {
+            background: var(--hover-color);
+            .hero__button-icon {
+              svg {
+                path {
+                  stroke: var(--hover-color);
+                }
+              }
+            }
+          }
+          .hero__button-text {
+            text-transform: uppercase;
+            @include descr-m;
+            color: var(--white-color);
+          }
+          .hero__button-icon {
+            background: var(--white-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 64px;
+            height: 64px;
+            border-radius: 10px;
+            svg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

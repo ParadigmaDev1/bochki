@@ -33,6 +33,15 @@ const MODALS = checkDir(MODALS_DIR);
 const copyPatterns = [];
 const imgPath = path.resolve(PATHS.src, PATHS.assets, "img");
 const staticPath = path.resolve(PATHS.src, "static");
+const filesPath = path.resolve(PATHS.src, PATHS.assets, "files");
+
+if (fs.existsSync(filesPath)) {
+  copyPatterns.push({
+    from: filesPath,
+    to: path.resolve(PATHS.dist, PATHS.assets, "files"),
+    noErrorOnMissing: true,
+  });
+}
 
 if (fs.existsSync(imgPath)) {
   copyPatterns.push({
@@ -45,7 +54,7 @@ if (fs.existsSync(imgPath)) {
 if (fs.existsSync(staticPath)) {
   copyPatterns.push({
     from: staticPath,
-    to: PATHS.dist,
+    to: path.resolve(PATHS.dist, "static"),
     noErrorOnMissing: true,
   });
 }
@@ -61,6 +70,13 @@ export default {
   },
   module: {
     rules: [
+      {
+        test: /\.(mp4|webm|avi|mov)$/i,
+        type: "asset/resource",
+        generator: {
+          filename: "assets/files/[name][ext]", // Путь для сохранения
+        },
+      },
       {
         test: /\.js$/,
         loader: "babel-loader",

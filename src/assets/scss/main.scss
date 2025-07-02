@@ -1,7 +1,7 @@
-// @import "./common/global.scss";
+@import "./common/normolize.scss";
+@import "./common/mixins.scss";
+@import "./common/anim.scss";
+@import "./common/global.scss";
+@import "./ui/index.scss";
 
-// @import "@/pug/components/header/header.scss";
-// @import "@/modals/test-modal/test-modal.scss";
-body {
-  background: rgb(234, 216, 194);
-}
+@import "./libs/swiper-bundle.min.scss";

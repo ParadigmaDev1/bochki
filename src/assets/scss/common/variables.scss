@@ -1,0 +1,32 @@
+:root {
+  --white-color: #fff;
+  --black-color: #000;
+  --accent-color: #f05a28;
+  --green-color: #72be44;
+  --green-hover-color: #4f9e1f;
+  --sky-color: #57aedc;
+  --sky-hover-color: #2e9ad3;
+  --blue-color: #0077ff;
+  --blue-hover-color: #005fcb;
+  --red-color: #f21c1c;
+  --red-hover-color: #c71414;
+  --brown-color: #493f39;
+  --hover-color: #de2e0f;
+  --back-beige-color: #f2efea;
+  --back-orange-color: #fbe6d2;
+
+  --shadow: 0 4px 28px 0 rgba(0, 0, 0, 0.1);
+  --shadow2: 0 4px 28px 0 rgba(0, 0, 0, 0.3);
+
+  --trs-300: 300ms ease;
+}
+
+$desktop-xl: 2000px;
+$desktop-lg: 1920px;
+$desktop-md: 1440px;
+$desktop-md-2: 1400px;
+$desktop-sm: 1280px;
+$tab: 1024px;
+$tab-sm: 767px;
+$pre-mob: 630px;
+$mob: 500px;

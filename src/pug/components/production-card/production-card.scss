@@ -1,0 +1,30 @@
+@import "../../../assets/scss/common/mixins.scss";
+
+.production-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  background: var(--white-color);
+  border-radius: 28px;
+  padding: 6px;
+  .paroduction-card__img {
+    border: 1px solid var(--back-beige-color);
+    border-radius: 24px;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding-bottom: 75%;
+    img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .production-card__title {
+    @include body-l;
+    padding: 0 14px 14px 14px;
+    text-align: center;
+  }
+}

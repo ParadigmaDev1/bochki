@@ -1,0 +1,10 @@
+@import "../../../assets/scss/common/mixins.scss";
+
+.certificates {
+  .certificates__inner {
+    .certificates__title {
+      @include display-l;
+      color: var(--white-color);
+    }
+  }
+}
